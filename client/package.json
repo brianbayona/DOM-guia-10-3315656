@@ -15,6 +15,10 @@
   "type": "module",
   "main": "script.js",
   "scripts": {
+    "dev": "json-server --watch ../server/db.json --port 3000",
     "test": "echo \"No hay pruebas configuradas\""
+  },
+  "devDependencies": {
+    "json-server": "^0.17.4"
   }
 }

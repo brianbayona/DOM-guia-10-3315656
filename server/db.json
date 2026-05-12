@@ -1,0 +1,51 @@
+{
+  "users": [
+    {
+      "id": "1098765432",
+      "name": "Nestor Stiven Gomez",
+      "rol": "Aprendiz ADSO",
+      "ficha": "2874057"
+    },
+    {
+      "id": "1234567890",
+      "name": "Brian Bayona",
+      "rol": "Aprendiz ADSO",
+      "ficha": "2874057"
+    },
+    {
+      "id": "1122334455",
+      "name": "Instructor SENA",
+      "rol": "Coordinador",
+      "ficha": "N/A"
+    }
+  ],
+  "tasks": [
+    {
+      "userId": "1098765432",
+      "userName": "Nestor Stiven Gomez",
+      "title": "joser",
+      "description": "aaaa",
+      "status": "Completada",
+      "createdAt": "12/05/2026, 05:40 p. m.",
+      "id": 1
+    },
+    {
+      "userId": "1122334455",
+      "userName": "Instructor SENA",
+      "title": "brian",
+      "description": "hola",
+      "status": "Pendiente",
+      "createdAt": "12/05/2026, 05:44 p. m.",
+      "id": 2
+    },
+    {
+      "userId": "1234567890",
+      "userName": "Brian Bayona",
+      "title": "nada",
+      "description": "ss",
+      "status": "En progreso",
+      "createdAt": "12/05/2026, 05:44 p. m.",
+      "id": 3
+    }
+  ]
+}
