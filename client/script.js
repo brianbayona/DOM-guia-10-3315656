@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000";
+const API_URL = "http://10.5.225.103:3002";
 
 const userIdInput = document.getElementById('userId');
 const btnSearch = document.getElementById('btnSearch');
@@ -223,7 +223,21 @@ userIdInput.addEventListener('keypress', function(e) {
 
 taskForm.addEventListener('submit', registerTask);
 
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('✅ DOM cargado - Sistema de gestión de tareas activo');
+document.addEventListener('DOMContentLoaded', async function() {
+    console.log('DOM cargado - Sistema de gestión de tareas activo');
     showEmptyState();
+
+    // 🚀 Carga automática de IDs disponibles al entrar a la página
+    try {
+        const response = await fetch(`${API_URL}/users`);
+        if (response.ok) {
+            const users = await response.json();
+            console.group("IDs DISPONIBLES PARA BUSCAR (Carga Inicial)");
+            console.log("Copia cualquiera de estos IDs en el buscador:");
+            console.table(users.map(u => ({ ID: u.id, Nombre: u.name, Rol: u.rol })));
+            console.groupEnd();
+        }
+    } catch (error) {
+        console.warn("No se pudieron precargar los IDs en consola. ¿El backend está encendido?", error.message);
+    }
 });
